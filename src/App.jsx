@@ -9,7 +9,10 @@ export const App = () => {
   const onChangeTodoText = (event) => setTodoText(event.target.value);
 
   const onClickAdd = () => {
-    alert(todoText);
+    if (todoText === "") return; // 何も入力しなかった時は実行されないという処理
+    const newTodos = [...incompleteTodos, todoText];
+    setIncompleteTodos(newTodos);
+    setTodoText(""); // 入力後の文字のリセット
   };
 
   return (
