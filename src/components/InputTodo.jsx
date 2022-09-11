@@ -1,3 +1,4 @@
+// InputTodoコンポーネントは、青い入力フォームのコンポーネント部分を表す。
 import React from "react";
 
 export const InputTodo = (props) => {
