@@ -15,8 +15,10 @@ export const App = () => {
     setTodoText(""); // 入力後の文字のリセット
   };
 
-  const onClickDelete = () => {
-    alert("削除です！");
+  const onClickDelete = (index) => {
+    const newTodos = [...incompleteTodos];
+    newTodos.splice(index, 1); // spliceの第一引数は操作対象、第二引数は、何個取り除くかを指定。
+    setIncompleteTodos(newTodos);
   };
 
   return (
