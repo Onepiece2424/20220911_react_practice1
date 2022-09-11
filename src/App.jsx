@@ -15,6 +15,10 @@ export const App = () => {
     setTodoText(""); // 入力後の文字のリセット
   };
 
+  const onClickDelete = () => {
+    alert("削除です！");
+  };
+
   return (
     <>
       <div className="input-area">
@@ -33,7 +37,7 @@ export const App = () => {
               <div key={todo} className="list-row">
                 <li>{todo}</li>
                 <button>完了</button>
-                <button>削除</button>
+                <button onClick={onClickDelete}>削除</button>
               </div>
             );
           })}
